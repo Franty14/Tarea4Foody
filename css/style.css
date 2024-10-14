@@ -1,0 +1,293 @@
+:root {
+    --primary: #3CB815;
+    --secondary: #F65005;
+    --light: #F7F8FC;
+    --dark: #111111;
+}
+
+/* General Styles */
+.section-header {
+    position: relative;
+    padding-top: 25px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header::before, .section-header::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-header::before {
+    width: 60px;
+    top: 0;
+    background: var(--primary);
+}
+
+.section-header::after {
+    width: 90px;
+    top: 10px;
+    background: var(--secondary);
+}
+
+.section-header h1 {
+    font-size: 2.5rem;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Carousel */
+.carousel-caption {
+    bottom: 40%;
+}
+
+.carousel-caption h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.btn-productos, .btn-servicios {
+    border: none;
+    padding: 10px 40px;
+    font-size: 1.2rem;
+    color: #fff;
+    border-radius: 40px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+.btn-productos {
+    background-color: var(--primary);
+}
+
+.btn-servicios {
+    background-color: var(--secondary);
+}
+
+/* Section Mejores Frutas */
+.mejores-frutas img {
+    border-radius: 50%;
+}
+
+.btn-mas-info {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    border: none;
+}
+
+.btn-mas-info:hover {
+    background-color: darkgreen;
+}
+
+/* Características */
+.nos-caracteriza .caracteristica {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.nos-caracteriza .caracteristica img {
+    max-width: 80px;
+    margin-bottom: 20px;
+}
+
+.nos-caracteriza .caracteristica h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.nos-caracteriza .caracteristica p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.nos-caracteriza .caracteristica .btn-mas-info {
+    padding: 10px 20px;
+    border: 2px solid var(--primary);
+    background-color: #fff;
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+.nos-caracteriza .caracteristica .btn-mas-info:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Productos */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas por fila */
+    gap: 30px;
+    justify-items: center;
+}
+
+.producto-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; 
+    max-width: 300px;
+}
+
+.producto-card:hover {
+    transform: scale(1.05);
+}
+
+.producto-card img {
+    max-width: 100px; 
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.producto-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.producto-card span {
+    color: var(--primary);
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.producto-card small {
+    display: inline-block;
+    margin-top: 10px;
+    color: #666;
+}
+
+.producto-card small a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-right: 10px;
+}
+
+.producto-card small a:hover {
+    text-decoration: underline;
+}
+
+/* Botón de agregar al carrito */
+.btn-add-to-cart {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid var(--primary);
+    background-color: #fff;
+    color: var(--primary);
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: auto; 
+    width: 80%; 
+}
+
+
+.btn-add-to-cart:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Visita nuestras fincas */
+.visita-fincas {
+    background-color: var(--primary);
+    padding: 50px 20px;
+    color: white;
+}
+
+.visita-fincas h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.visita-fincas p {
+    font-size: 1rem;
+    max-width: 600px;
+}
+
+.visita-fincas .btn-ingresar {
+    background-color: var(--secondary);
+    color: white;
+    padding: 15px 50px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.visita-fincas .btn-ingresar:hover {
+    background-color: darkorange;
+}
+
+
+@media (max-width: 992px) {
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .carousel-caption h2 {
+        font-size: 2rem; 
+    }
+
+    .btn-productos, .btn-servicios {
+        padding: 10px 30px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .productos-grid {
+        grid-template-columns: 1fr; 
+    }
+    .visita-fincas {
+        text-align: center;
+    }
+
+    .carousel-caption h2 {
+        font-size: 1.5rem; 
+    }
+
+
+    .btn-productos, .btn-servicios {
+        font-size: 0.9rem;
+        padding: 8px 20px; 
+        border-radius: 20px; 
+        margin: 5px 0; 
+    }
+
+    .carousel-caption {
+        bottom: 20%; 
+        text-align: center; 
+    }
+    
+
+    .header h1 {
+        font-size: 1.2rem; 
+    }
+
+}
